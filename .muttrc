@@ -1,0 +1,52 @@
+# Allgemeines
+set escape=\c
+
+# Einstellungen für maildir Format
+set mbox_type=Maildir
+set folder="~/Mail"
+set mbox="~/Mail"
+set spoolfile="~/Mail"
+set mask="^\\.[^.]"
+set record=+.outbox
+set postponed=+.drafts
+
+mailboxes ! +.p +.teerunde 
+
+# Ordneransicht (Index)
+set sort=threads
+#set sidebar_visible=yes
+#set sidebar_width=50
+set hdr_format="%4Z %d %-20.20n %s"
+set date_format="%Y-%m-%d %H:%M"
+bind index 'g' first-entry
+bind index 'G' last-entry
+set header_cache="/tmp/mutt-cache"
+
+# Anzeigen von Mails (Pager)
+set implicit_autoview
+auto_view text/html
+set timeout=0
+ignore *
+unignore from: to: cc: reply-to: subject date:
+#hdr_order subject from to cc reply-to date
+hdr_order date to cc reply-to from subject
+set move=no
+alternative_order text/plain text/html
+
+# Senden von Mails
+set editor="vim"
+set send_charset="us-ascii:iso-8859-1:iso-8859-15:utf-8"
+set alias_file="~/.aliases"
+source ~/.aliases
+set copy=yes
+alternates Knut.Franke@gmx.de
+set from="Knut.Franke@gmx.de"
+set use_from=yes
+set sendmail="/usr/bin/msmtp"
+set realname="Knut Franke"
+set askcc=yes
+set fast_reply=yes
+set include=yes
+
+# Aussehen
+source .mutt/solarized/mutt-colors-solarized-light-16.muttrc
