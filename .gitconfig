@@ -1,0 +1,19 @@
+[user]
+	name = Knut Franke
+	email = Knut.Franke@gmx.de
+[core]
+	pager = less -FX
+[alias]
+	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad %an)%Creset' --date=iso --graph
+	ci = svn dcommit --add-author-from
+	up = svn rebase --use-log-author
+	co = svn clone --stdlayout --no-metadata --ignore-paths='tags/qtiplot' --use-log-author
+[color]
+	ui = auto
+[sendemail]
+	smtpencryption = tls
+	smtpserver = mail.gmx.net
+	smtpserverport = 25
+	smtpuser = 377055
+[merge]
+	tool = vimdiff
