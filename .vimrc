@@ -8,7 +8,6 @@ call pathogen#helptags()
 " }}}
 
 " -- ctags --- {{{
-let g:ctags_statusline=1
 let g:generate_tags=1
 set tags=./tags,./TAGS,tags,TAGS,~/qt-tags
 "  }}}
