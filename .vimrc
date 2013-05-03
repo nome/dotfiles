@@ -13,6 +13,10 @@ let g:generate_tags=1
 set tags=./tags,./TAGS,tags,TAGS,~/qt-tags
 "  }}}
 
+" --- DetectIndent --- {{{
+autocmd BufReadPost * :DetectIndent
+"  }}}
+
 
 " --- basic settings --- {{{
 set sws=                " Disable swapfile syncing (in order to support laptop-mode)
