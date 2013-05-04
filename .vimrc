@@ -16,6 +16,11 @@ set tags=./tags,./TAGS,tags,TAGS,~/qt-tags
 autocmd BufReadPost * :DetectIndent
 "  }}}
 
+" --- bufsurf --- {{{
+nmap <Leader>p :BufSurfBack<Enter>
+nmap <Leader>n :BufSurfForward<Enter>
+"  }}}
+
 
 " --- basic settings --- {{{
 set sws=                " Disable swapfile syncing (in order to support laptop-mode)
